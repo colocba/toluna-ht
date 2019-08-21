@@ -63,6 +63,13 @@ The state contains:
 - redux
 - react-transition-group: For making enter and exiting effect for each item on the list.
 
+## Missing parts
+
+Unfortunely, the project has taken more time that I thought, therefore I haven't done the browser local storage part.
+I could have accomplished this by:
+1. Fetching data in componentDidMount() function in App component from the localStorage with ls.get() to the redux store. 
+2. Saving the last snapshot of the store when closing the App with ls.set().
+
 ## Time spend
 
 Since we haven't talk anything about time, I have decided to do the best I can and learn all the new challenges gaven in this task.
@@ -75,4 +82,4 @@ The app is adapted for large screen size as well as for mobile screen size.
 
 ## Web URL
 
-You will be able to enter the app on the [following url](http://colocba.github.io/toluna-ht "following url")
+You will be able to enter the app on the [following url](https://toluna-ht.onrender.com)
