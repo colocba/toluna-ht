@@ -1,0 +1,32 @@
+.answer-row {
+    height: 160px;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.answer-row:hover {
+    background-color: rgb(255,255,255,.1);
+}
+
+.answer-img {
+    height: 93px;
+    width: 93px;
+}
+
+.answer-text {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20pt;
+}
+
+.minus-icon {
+    font-size: 64px;
+    color: #d6db4b !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+    .answer-row:hover {
+        background-color: transparent;
+    }
+}

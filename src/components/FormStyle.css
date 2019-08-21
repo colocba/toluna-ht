@@ -1,0 +1,44 @@
+.form-out-container {
+    height: 50px !important;
+    width: 688px !important;
+}
+
+.form-input-text {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    resize: none;
+    text-align: justify;
+}
+
+.form-button {
+    height: 100%;
+    width: 100%;
+}
+
+::placeholder {
+    font-size: 12pt;
+    padding: 10px;
+}
+
+@media screen and (max-width: 750px) {
+    .form-out-container {
+        height: 154px !important;
+        width: 636px !important;
+    }
+
+    .form-col-input-text {
+        max-height: 70%;
+    }
+
+    .form-col-button {
+        max-height: 30%;
+    }
+    ::placeholder {
+        font-size: 13pt;
+    }
+
+    .form-input-text {
+        text-align: center;
+    }
+}

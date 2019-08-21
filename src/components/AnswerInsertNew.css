@@ -1,0 +1,21 @@
+.add-icon {
+    font-size: 64px; 
+    color: #d6db4b;
+}
+
+.form-insert-new-out-container {
+    height: 80px;
+    width: 688px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media screen and (max-width: 750px) {
+    .add-icon {
+        font-size: 126px; 
+    }
+    .form-insert-new-out-container {
+        height: 154px !important;
+        width: 636px !important; 
+    }
+}

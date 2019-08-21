@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
+import Container from 'react-bootstrap/Container'
+import { connect } from 'react-redux'
+import {bindActionCreators} from 'redux'
+import Firebase from 'firebase'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+import Logo from './components/Logo';
+import QAForms from './components/QAForms';
+import fetchAnswers from './actions/fetchAnswers'
+import fetchQuestions from './actions/fetchQuestions'
+import fbConfig from './config'
+
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    Firebase.initializeApp(fbConfig);
+  }
+
+  componentDidMount() {
+    // Initializing the store with the answerss
+    fetch('./data.json')
+    .then(res => res.json())
+    .then(data => this.updateStore(data))
+  }
+
+  updateStore(data) {
+    this.props.fetchQuestions(data.question);
+    this.props.fetchAnswers(data.answers);
+  }
+
+  render() {
+    return (
+      <div className="App">
+      <Container className="out-container">
+        <Logo/>
+        <QAForms/>
+      </Container>
     </div>
-  );
+    )
+  }
 }
 
-export default App;
+
+function matchDispatchToProps(dispatch) {
+  return bindActionCreators({fetchQuestions: fetchQuestions, fetchAnswers: fetchAnswers}, dispatch);
+} 
+
+export default connect(null, matchDispatchToProps)(App)

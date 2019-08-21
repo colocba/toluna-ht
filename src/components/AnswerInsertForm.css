@@ -1,0 +1,59 @@
+.outer-row-container {
+    border: 2px solid white;
+}
+
+.input-file-col, .input-text-col, .button-col {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.input-file-col {
+    border-right: 2px solid white;
+}
+
+.save-button {
+    background-color: rgb(100,213,249);
+    width: 100%;
+    height: 100%;
+}
+
+.input-text {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    resize: none;
+    text-align: justify;
+    outline: none;
+}
+
+.input-text::placeholder {
+    color: white;
+    padding-top: 20px;
+}
+
+.input-file {
+    width: 100%;
+    height: 100%;
+    margin: 15px;
+}
+
+input[type='file'] {
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .outer-row-container {
+        height: 110px;
+    }
+    input[type='file'] {
+        color: transparent;
+        padding-top: 10px;
+    }
+    .input-text::placeholder {
+        color: white;
+        text-align: center;
+        font-size: 15pt;
+    }
+}

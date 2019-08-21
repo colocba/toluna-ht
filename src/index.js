@@ -3,8 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import allReducers from './reducers';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(allReducers,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+ReactDOM.render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
