@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Container from 'react-bootstrap/Container'
 import { connect } from 'react-redux'
-import {bindActionCreators} from 'redux'
+import { bindActionCreators } from 'redux'
 import Firebase from 'firebase'
 
 import Logo from './components/Logo';
@@ -21,8 +21,8 @@ class App extends Component {
   componentDidMount() {
     // Initializing the store with the answerss
     fetch('./data.json')
-    .then(res => res.json())
-    .then(data => this.updateStore(data))
+      .then(res => res.json())
+      .then(data => this.updateStore(data))
   }
 
   updateStore(data) {
@@ -33,18 +33,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Container className="out-container">
-        <Logo/>
-        <QAForms/>
-      </Container>
-    </div>
+        <Container className="out-container">
+          <Logo />
+          <QAForms />
+        </Container>
+      </div>
     )
   }
 }
 
 
 function matchDispatchToProps(dispatch) {
-  return bindActionCreators({fetchQuestions: fetchQuestions, fetchAnswers: fetchAnswers}, dispatch);
-} 
+  return bindActionCreators({ fetchQuestions: fetchQuestions, fetchAnswers: fetchAnswers }, dispatch);
+}
 
 export default connect(null, matchDispatchToProps)(App)

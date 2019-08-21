@@ -6,8 +6,8 @@ import Container from 'react-bootstrap/Container';
 export default function QAForms() {
     return (
         <Container>
-            <QuestionContainer/>
-            <AnswerContainer/>
+            <QuestionContainer />
+            <AnswerContainer />
         </Container>
     )
 }

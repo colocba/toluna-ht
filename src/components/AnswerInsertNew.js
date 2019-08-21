@@ -23,7 +23,7 @@ export default class AnswerInsertNew extends Component {
     render() {
         return (
             <Row>
-                <Container style={{marginTop: 53, marginBottom: 53}} className="form-insert-new-out-container">
+                <Container style={{ marginTop: 53, marginBottom: 53 }} className="form-insert-new-out-container">
                     {!this.state.insertAnswer ?
                         <Col className="align-self-center" xs={12} xl={12}>
                             <i onClick={this.toggle} className="material-icons add-icon">add_circle_outline</i>

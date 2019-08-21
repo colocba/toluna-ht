@@ -7,10 +7,10 @@ import Title from './Title';
 export default function QuestionContainer() {
     return (
         <div>
-            <QuestionImage/>
+            <QuestionImage />
             <Title text="Question" />
-            <QuestionForm/>
+            <QuestionForm />
         </div>
-        
+
     )
 }

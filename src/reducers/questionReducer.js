@@ -1,6 +1,6 @@
 const initialState = {
-      "text":"",
-      "imageURL":""
+    "text": "",
+    "imageURL": ""
 }
 
 const question = (state = initialState.text, action) => {
@@ -10,7 +10,7 @@ const question = (state = initialState.text, action) => {
         case 'CHANGE_QUESTION':
             return Object.assign({}, state, {
                 text: action.payload
-            }); 
+            });
         default:
             return state;
     }

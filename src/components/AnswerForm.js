@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
 
 import './FormStyle.css'
 import searchAnswer from '../actions/searchAnswers'
@@ -20,7 +20,7 @@ class AnswerForm extends Component {
     }
 
     handleChange(e) {
-        this.setState({formValue: e.target.value})
+        this.setState({ formValue: e.target.value })
     }
 
     render() {
@@ -30,8 +30,6 @@ class AnswerForm extends Component {
                 <Container className="form-out-container">
                     <Row style={{ height: '100%' }}>
                         <Col xl={10} xs={12} style={{ paddingLeft: '0', paddingRight: '0' }} className="form-col-input-text">
-                            {/* <input type="text" placeholder={this.state.placeholder} onChange={this.handleChange} className="form-input-text"></input>
-                            <textarea onChange={this.handleChange} className="form-input-text">{this.state.placeholder}</textarea> */}
                             <textarea placeholder="Search answers" className="form-input-text" onChange={this.handleChange}></textarea>
                         </Col>
                         <Col xl={2} xs={12} style={{ paddingLeft: '0', paddingRight: '0' }} className="form-col-button">
@@ -47,10 +45,10 @@ class AnswerForm extends Component {
 }
 
 function matchDispatchToProps(dispatch) {
-    return bindActionCreators({searchAnswer: searchAnswer}, dispatch);
+    return bindActionCreators({ searchAnswer: searchAnswer }, dispatch);
 }
 
-export default connect(null,matchDispatchToProps)(AnswerForm);
+export default connect(null, matchDispatchToProps)(AnswerForm);
 
 
 

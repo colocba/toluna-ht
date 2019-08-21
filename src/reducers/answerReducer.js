@@ -8,7 +8,7 @@ const answers = (state = initialState, action) => {
         case 'FETCH_ANSWERS':
             return Object.assign({}, state, {
                 answers: action.payload
-            }); 
+            });
         case 'FILTER_ANSWERS':
             return Object.assign({}, state, {
                 filterText: action.payload

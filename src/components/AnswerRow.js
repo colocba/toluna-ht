@@ -25,15 +25,13 @@ class AnswerRow extends Component {
             <Container style={{ paddingLeft: 0, paddingRight: 0 }}>
                 <Row className="answer-row">
                     <Col className="align-self-center" xs={3} xl={3}>
-                        {/* <Image src={this.props.imgUrl} className="answer-img float-right" roundedCircle></Image> */}
                         <div className="answer-img float-right">
-                            <Image src={this.props.imgUrl} style={{width: '100%', height: '100%'}} roundedCircle></Image>
+                            <Image src={this.props.imgUrl} style={{ width: '100%', height: '100%' }} roundedCircle></Image>
                         </div>
                     </Col>
                     <Col className="align-self-center" xs={6} xl={6}>
-                        {/* <label className="answer-text float-left">{this.props.text}</label> */}
                         <div className="answer-text float-left">
-                            <label style={{width: '100%', height: '100%'}}>{this.props.text}</label>
+                            <label style={{ width: '100%', height: '100%' }}>{this.props.text}</label>
                         </div>
                     </Col>
                     <Col className="align-self-center" xs={3} xl={3}>

@@ -96,7 +96,7 @@ class AnswerInsertForm extends Component {
                         </Col>
                         <Col className="input-text-col" xs={6} xl={4}>
                             <textarea placeholder="Answer text..." className="input-text" onChange={this.handleChange}></textarea>
-                            
+
                         </Col>
                         <Col className="button-col" xs={12} xl={2}>
                             <button onClick={this.saveNewAnswer} className="save-button">
